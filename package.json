@@ -1,0 +1,23 @@
+{
+  "name": "pureStream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon ./server.js",
+    "build": "webpack --config webpack.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dronestream": "^1.1.1",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "nipplejs": "^0.6.7",
+    "socket.io": "^1.7.4",
+    "socket.io-client": "^1.7.3",
+    "webpack": "^2.4.1"
+  }
+}

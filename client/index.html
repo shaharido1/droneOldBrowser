@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>node stream</title>
+  <link rel="stylesheet" href="client/client.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="dronestream/nodecopter-client.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="all">
+    <div id="container">
+      <div id="videoContainer">
+        <div id="droneStream" style="width: 640px; height: 360px"> </div>
+      </div>
+      <div id="buttons">
+        <button type="button" class="btn btn-primary" id="takeoff" style="width:24%">takeoff</button>
+        <button type="button" class="btn btn-primary" id="land" style="width:24%">land</button>
+        <button type="button" class="btn btn-primary" id="revcover" style="width:24%">recovering</button>
+        <button type="button" class="btn btn-primary" id="stop" style="width:25%">stop!!</button>
+      </div>
+      <div id="navbutton">
+        <button type="button" class="btn btn-primary" id="up" style="width:24%">
+        <span class="glyphicon glyphicon-chevron-up"> upward</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="down" style="width:24%">
+        <span class="glyphicon glyphicon-chevron-down"> downward</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="counterClockwise" style="width:24%">
+        <span class="glyphicon glyphicon-chevron-left"> rot.left</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="clockwise" style="width:25%">
+        <span class="glyphicon glyphicon-chevron-right"> rot.right</span>
+      </button>
+      </div>
+            <div id="navbutton">
+        <button type="button" class="btn btn-primary" id="front" style="width:24%">
+        <span class="glyphicon glyphicon-arrow-up"> forward</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="back" style="width:24%">
+        <span class="glyphicon glyphicon-arrow-down"> backward</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="left" style="width:24%">
+        <span class="glyphicon glyphicon-arrow-left"> leftward</span>
+      </button>
+        <button type="button" class="btn btn-primary" id="right" style="width:25%">
+        <span class="glyphicon glyphicon-arrow-right"> righttward</span>
+      </button>
+      </div>
+    </div>
+    <div id="onside">
+    <div id="dataTable" class="table-responsive">
+      <table class="table">
+        <tr>
+          <td>battery percentage</td>
+          <td id="battery"></td>
+        </tr>
+        <tr>
+          <td>clock turn</td>
+          <td id="clockTurn"></td>
+        </tr>
+        <tr>
+          <td>frontBack</td>
+          <td id="frontBack"></td>
+        </tr>
+        <tr>
+          <td>leftRight</td>
+          <td id="leftRight"></td>
+        </tr>
+        <tr>
+          <td>altitudeMeters</td>
+          <td>
+            <div id="altitudeMeters"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>velocity Z</td>
+          <td id="velocityZ"></td>
+        </tr>
+        <tr>
+          <td>velocity Y</td>
+          <td id="velocityY"></td>
+        </tr>
+        <tr>
+          <td>velocityX</td>
+          <td id="velocityX"></td>
+        </tr>
+      </table>
+  </div>
+    <div id="content"></div>
+    </div>
+  <script type="text/javascript" charset="utf-8">
+    new NodecopterStream(document.getElementById("droneStream"));
+  </script>
+  <script src="client/scripts.min.js"></script>
+</body>
+
+</html>
